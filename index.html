@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    /* (Your CSS remains same, no change needed for now) */
     * {
       margin: 0;
       padding: 0;
@@ -57,6 +56,17 @@
       animation: fadeInUp 1s ease-in;
       position: relative;
       z-index: 1;
+    }
+    .profile-pic {
+      width: 100px;
+      border-radius: 0%;
+      margin: 1rem auto;
+      display: block;
+      box-shadow: 0 0 20px #66ffcc;
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
     }
     section {
       margin-bottom: 3rem;
@@ -137,12 +147,31 @@
     .project:hover {
       transform: translateY(-5px);
     }
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+    }
     .project h3 {
       color: #66ffcc;
     }
     .project p {
       color: #f1f1f1;
     }
+    .logo-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  object-fit: contain;
+}
+li {
+  list-style: none;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -163,6 +192,7 @@
 </head>
 <body>
   <header>
+    <img src="photo.png" alt="Sabareesh B" class="profile-pic" />
     <h1>Sabareesh Balakrishnan</h1>
     <p>Graphic designer | Frontend developer | java developer | Final Year IT Student</p>
   </header>
@@ -176,13 +206,14 @@
     <section class="reveal">
       <h2>Skills</h2>
       <ul>
-        <li>Python</li>
-        <li>Java</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Graphic designing</li>
-        <li>AI Concepts & Flask</li>
+        <li><img src="py.png" class="logo-icon" alt="Python"> Python</li>
+        <li><img src="java.png" class="logo-icon" alt="Java"> Java</li>
+        <li><img src="html.png" class="logo-icon" alt="HTML"> HTML</li>
+        <li><img src="css.jpg" class="logo-icon" alt="CSS"> CSS</li>
+        <li><img src="ca.png" class="logo-icon" alt="Digital Marketing"> Graphic designing</li>
+        <li><img src="fla.png" class="logo-icon" alt="AI"> AI Concepts & Flask</li>
       </ul>
+      
     </section>
 
     <section class="reveal">
@@ -199,10 +230,12 @@
     <section class="reveal">
       <h2>Projects</h2>
       <div class="project">
+        <img src="va.jpeg" alt="Virtual Assistant Project">
         <h3>AI Virtual Assistant</h3>
         <p>A Python-based AI Virtual Assistant capable of performing basic tasks like opening applications, answering general queries, and providing reminders. Built using <strong>speech recognition</strong>, <strong>pyttsx3</strong>, and <strong>web scraping</strong> for dynamic responses. Designed to demonstrate automation using voice input and AI integration with Python.</p>
       </div>
       <div class="project">
+        <img src="inf.avif" alt="Influencer Marketing Web App">
         <h3>Influencer Marketing Web App</h3>
         <p>A full-stack web application that helps users find the most suitable influencers for marketing based on their niche (e.g., fashion, tech) and preferred social media platform (e.g., Instagram, YouTube). It uses AI to recommend top influencers based on <strong>engagement rate</strong>, <strong>audience match</strong>, and <strong>content relevance</strong>. Built using <strong>HTML, CSS, JavaScript</strong> (frontend), and <strong>Python Flask</strong> (backend).</p>
       </div>
